@@ -1,0 +1,37 @@
+{
+    "dataset": "data/dataset.csv",
+    "test_size": 0.2,
+    "random_state": 42,
+    "results": [
+        {
+            "model": "Random Forest",
+            "accuracy": 0.9532520325203252,
+            "precision": 0.9554136924017484,
+            "recall": 0.9532520325203252,
+            "f1_score": 0.9530206855492473,
+            "training_time_seconds": 0.3360206999350339,
+            "inference_time_seconds": 0.04386490001343191,
+            "test_samples": 984
+        },
+        {
+            "model": "XGBoost",
+            "accuracy": 0.9461382113821138,
+            "precision": 0.9481314730201262,
+            "recall": 0.9461382113821138,
+            "f1_score": 0.945883487206668,
+            "training_time_seconds": 5.188332500169054,
+            "inference_time_seconds": 0.04687660001218319,
+            "test_samples": 984
+        },
+        {
+            "model": "SVM",
+            "accuracy": 0.9542682926829268,
+            "precision": 0.9568960592552712,
+            "recall": 0.9542682926829268,
+            "f1_score": 0.9541504689365403,
+            "training_time_seconds": 2.385528299957514,
+            "inference_time_seconds": 0.2384472000412643,
+            "test_samples": 984
+        }
+    ]
+}

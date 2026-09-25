@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="96" fill="url(#avatarBg)" stroke="#38bdf8" stroke-width="4"/>
+  <!-- Stethoscope around neck -->
+  <path d="M 68 135 C 68 165, 132 165, 132 135" fill="none" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="100" cy="160" r="7" fill="#0284c7"/>
+  <!-- Head -->
+  <circle cx="100" cy="78" r="32" fill="#fbcfe8"/>
+  <!-- Hair -->
+  <path d="M 68 76 C 68 46, 132 46, 132 76 C 132 60, 68 60, 68 76" fill="#1e293b"/>
+  <!-- Coat -->
+  <path d="M 52 170 C 52 125, 75 120, 100 120 C 125 120, 148 125, 148 170 Z" fill="#ffffff"/>
+  <!-- Tie / Collar -->
+  <polygon points="100,120 92,145 100,158 108,145" fill="#0284c7"/>
+</svg>

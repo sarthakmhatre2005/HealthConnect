@@ -1,0 +1,20 @@
+[project]
+name = "healthconnect-platform"
+version = "0.2.0"
+description = "HealthConnect - Smart Healthcare Platform with Local ML Ensemble"
+requires-python = ">=3.11"
+dependencies = [
+    "email-validator>=2.2.0",
+    "flask-login>=0.6.3",
+    "flask>=3.1.0",
+    "flask-sqlalchemy>=3.1.1",
+    "flask-cors>=6.0.0",
+    "flask-wtf>=1.2.2",
+    "gunicorn>=23.0.0",
+    "joblib>=1.4.0",
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "scikit-learn>=1.4.0",
+    "werkzeug>=3.1.0",
+    "xgboost>=2.0.0",
+]

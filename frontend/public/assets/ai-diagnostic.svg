@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="rfGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="xgbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="ensembleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="450" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Left: Input Symptoms Column -->
+  <rect x="30" y="50" width="160" height="350" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="110" y="85" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#0f172a" text-anchor="middle">PATIENT SYMPTOMS</text>
+  <line x1="50" y1="100" x2="170" y2="100" stroke="#e2e8f0" stroke-width="1"/>
+
+  <rect x="45" y="120" width="130" height="36" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="110" y="143" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#334155" text-anchor="middle">Chest Pain</text>
+
+  <rect x="45" y="170" width="130" height="36" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="110" y="193" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#334155" text-anchor="middle">Shortness of Breath</text>
+
+  <rect x="45" y="220" width="130" height="36" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="110" y="243" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#334155" text-anchor="middle">Sweating</text>
+
+  <rect x="45" y="270" width="130" height="36" rx="8" fill="#f0f9ff" stroke="#bae6fd"/>
+  <text x="110" y="293" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#0284c7" text-anchor="middle">132 Binary Vectors</text>
+
+  <!-- Connectors from Input to Models -->
+  <path d="M190 200 C 230 200, 230 140, 260 140" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M190 200 C 230 200, 230 290, 260 290" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- Model 1: Random Forest -->
+  <rect x="260" y="80" width="180" height="110" rx="12" fill="url(#rfGrad)"/>
+  <text x="350" y="115" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">RANDOM FOREST</text>
+  <text x="350" y="135" font-family="system-ui, sans-serif" font-size="12" fill="#e0f2fe" text-anchor="middle">120 Decision Trees</text>
+  <rect x="280" y="150" width="140" height="24" rx="6" fill="#ffffff" fill-opacity="0.2"/>
+  <text x="350" y="166" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">Accuracy: 91.4%</text>
+
+  <!-- Model 2: XGBoost -->
+  <rect x="260" y="240" width="180" height="110" rx="12" fill="url(#xgbGrad)"/>
+  <text x="350" y="275" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">XGBOOST</text>
+  <text x="350" y="295" font-family="system-ui, sans-serif" font-size="12" fill="#ccfbf1" text-anchor="middle">Gradient Boosted Trees</text>
+  <rect x="280" y="310" width="140" height="24" rx="6" fill="#ffffff" fill-opacity="0.2"/>
+  <text x="350" y="326" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">Accuracy: 94.6%</text>
+
+  <!-- Connectors from Models to Ensemble -->
+  <path d="M440 135 C 470 135, 470 215, 490 215" fill="none" stroke="#6366f1" stroke-width="2.5"/>
+  <path d="M440 295 C 470 295, 470 215, 490 215" fill="none" stroke="#6366f1" stroke-width="2.5"/>
+
+  <!-- Right: Ensemble Output -->
+  <rect x="490" y="70" width="180" height="290" rx="14" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  
+  <rect x="490" y="70" width="180" height="50" rx="14" fill="url(#ensembleGrad)"/>
+  <rect x="490" y="100" width="180" height="20" fill="url(#ensembleGrad)"/>
+  <text x="580" y="100" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">SOFT ENSEMBLE</text>
+  <text x="580" y="114" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#e0e7ff" text-anchor="middle">Top-3 Acc: 99.0%</text>
+
+  <!-- Top 3 Results Inside Container -->
+  <rect x="505" y="140" width="150" height="56" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="515" y="160" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">1. Heart Attack</text>
+  <text x="515" y="180" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#0284c7">Probability: 46%</text>
+
+  <rect x="505" y="210" width="150" height="56" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="515" y="230" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">2. Angina Pectoris</text>
+  <text x="515" y="250" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#64748b">Probability: 28%</text>
+
+  <rect x="505" y="280" width="150" height="56" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="515" y="300" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">3. Bronchial Asthma</text>
+  <text x="515" y="320" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#64748b">Probability: 14%</text>
+
+  <!-- Bottom Triage Flag -->
+  <rect x="230" y="380" width="240" height="36" rx="18" fill="#fee2e2" stroke="#fca5a5"/>
+  <text x="350" y="403" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#b91c1c" text-anchor="middle">Emergency Rule Triggered</text>
+</svg>

@@ -1,0 +1,9 @@
+import logging
+import os
+from app import app
+from routes import *
+
+if __name__ == '__main__':
+    # Set up logging
+    logging.basicConfig(level=logging.DEBUG)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', '5000')), debug=True)
